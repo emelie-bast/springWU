@@ -1,4 +1,76 @@
-#wrapper{
+#Wrapper{
 max-width: 100vw;
 min-height: 100vh;
+display: grid;
+grid-area: span;
+grid-template-columns: 33% 1fr 33%;
+grid-template-rows: auto auto auto auto auto auto;
+grid-template-areas: 
+"hd hd hd"
+"nv1 nv1 nv1"
+"mn mn mn"
+"nv2 nv2 nv2"
+"sc1 sc2 sc3";
+padding: 5px;
+margin: 5px;
+outline: 2px solid white;
 }
+body{
+    background-color: rgb(180, 221, 255);
+}
+
+header{
+    background-color: lemonchiffon; 
+    grid-area: hd;
+    text-align: center;
+    border-radius: 20px;
+    color: grey;
+    
+}
+#nav1{
+    background-color: rgb(255, 173, 220);
+    grid-area: nv1;
+    border-radius: 30px;
+    color: cornsilk;
+}
+
+main{
+    background-color: lemonchiffon;
+    grid-area: mn;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
+
+#nav2{
+    background-color: rgb(255, 173, 220);
+    grid-area: nv2;
+    border-radius: 30px;
+    color: cornsilk;
+}
+
+footer{
+    background-color: lemonchiffon;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-column: span 3;
+    gap: 1rem;
+    
+    
+}
+#sec1{
+    grid-area: sc1;
+}
+
+#sec2{
+    grid-area: sc2;
+}
+#sec3{
+    grid-area: sc3;
+}
+
+section img{ 
+    width: 100%;
+    height: auto; 
+    }
