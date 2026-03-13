@@ -1,3 +1,4 @@
+
 #Wrapper{
 max-width: 100vw;
 min-height: 100vh;
@@ -6,25 +7,35 @@ grid-area: span;
 grid-template-columns: 33% 1fr 33%;
 grid-template-rows: auto auto auto auto auto auto;
 grid-template-areas: 
-"hd hd hd"
-"nv1 nv1 nv1"
-"mn mn mn"
-"nv2 nv2 nv2"
-"sc1 sc2 sc3";
-padding: 5px;
-margin: 5px;
+"mnu hd hd hd hd hd"
+"nv1 nv1 nv1 nv1 nv1 nv1"
+"mn mn mn mn mn mn"
+"nv2 nv2 nv2 nv2 nv2 nv2"
+"sc1 sc1 sc2 sc2 sc3 sc3";
+padding: 10px;
+margin: 10px;
 outline: 2px solid white;
 }
+
+
+body, header, main, nav {
+display: grid;
+outline-color: rgb(255, 255, 255);
+}
+
 body{
     background-color: rgb(180, 221, 255);
 }
+
+
 
 header{
     background-color: lemonchiffon; 
     grid-area: hd;
     text-align: center;
     border-radius: 20px;
-    color: grey;
+    color: grey; 
+    min-width: 100%;
     
 }
 #nav1{
@@ -74,3 +85,45 @@ section img{
     width: 100%;
     height: auto; 
     }
+
+
+    .menu{
+        grid-area: mnu;
+    height: 80vh;
+    width: 40vw;
+    background: rgb(255, 183, 219);
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px #f6bee5bf;
+    z-index: 10;
+}
+
+.menu-button{
+    cursor: pointer;
+    display: inline;
+}
+
+.menu-button i.material-icons{
+    font-size: 1.5rem;
+}
+
+.show{
+    left: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
